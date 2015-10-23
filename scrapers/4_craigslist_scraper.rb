@@ -11,12 +11,14 @@ addresses.each do |address|
 	res = address.text.gsub(/[()]/, "").strip[0]
 	if (/[0-9]/ =~ res) != nil
 		if (address.text.gsub(/[()]/, "")) == nil
-			return 
+			address_array << nil 
 		else
 			address_array << address.text.gsub(/[()]/, "")  
 		end
+	else
+		address_array << nil
 	end
 end
 
-puts address_array[1]
+puts address_array
 
