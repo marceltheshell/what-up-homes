@@ -8,8 +8,6 @@ require 'csv'
 url = 'https://sfbay.craigslist.org/eby/apa/5278726808.html'
 page = Nokogiri::HTML(open(url))
 
-confirmation_id
-
 latlon_array = []
 address_array = []
 
@@ -20,11 +18,12 @@ latlons.each do |latlon|
 	longitude = latlon['data-longitude']
 	latlon_array = [lattitude, longitude]
 end
+puts latlon_array
 
-addresses = page.css('section.body div.mapaddress')
-addresses.each do |address|
-	address_array << address.text
-end
+# addresses = page.css('section.body div.mapaddress')
+# addresses.each do |address|
+# 	address_array << address.text
+# end
 
 
 
