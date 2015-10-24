@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+f1 = "/Users/marceldegas/dev/what-up-homes/craigslist_listings_wuh.csv"
+
+def inputListings(file)
+	temp = nil
+	res = []
+	f = File.open(file)
+	f_read = f.read
+	f_read.each_line do |line|
+		temp = line.split(",")
+		listing = {}
+		listing[:address] = temp[0]
+		listing[:date] = temp[1]
+		listing[:listing_id] = temp[2]
+		listing[:listing_title] = temp[3]
+		listing[:price] = temp[4]
+		listing[:bedrooms] = temp[5]
+		listing[:square_ft] = temp[6]
+		listing[:city] = temp[7]
+		res << listing 
+	end
+	Listing.create(res)
+end
+
+# clears db
+Listing.destroy_all
+
+# refresh with new data
+inputListings(f1)
+
+
+
+ 
+
+
