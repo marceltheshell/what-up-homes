@@ -1,0 +1,8 @@
+<div class="container">
+	<h1>listings</h1>  
+	<!-- how the hell do I get the date in the place above here? -->
+	<% @listings.each do |listing| %> 
+	<h4><strong><a href="#"><%= listing.listing_title %></a></strong></h4> 
+	<h4><font color='gray'><%= listing.address %></font></h4>
+	<% end %>
+</div>

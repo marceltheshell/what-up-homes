@@ -75,7 +75,7 @@ city_array = cities.map do |city|
 	city.text.gsub(/[()]/, "").strip
 end 
 
-CSV.open("craigslist_listings_wuh.csv", "w") do |file|
+CSV.open("craigslist_listings_wuh.csv", "a") do |file|
 	# file << ["Address", "Date", "Listing_ID", "Listing_Title", "Price", "Bedrooms", "Square_Ft", "City"]
 	date_array.length.times do |i|
 		file << [address_array[i], date_array[i], id_array[i], title_array[i], price_array[i], bedrooms_array[i],  sqft_array[i],  city_array[i]]

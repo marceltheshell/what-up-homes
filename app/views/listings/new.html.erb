@@ -1,0 +1,28 @@
+<h1>Enter a new listing</h1>
+
+<div class="container">
+	<%= form_for @listing, url: {action: "create"} do |f| %>
+		<div>
+			<%= f.text_field :date, placeholder: "Date of listing", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :address, placeholder: "Address", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :listing_title, placeholder: "listing_title", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :price, placeholder: "price", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :bedrooms, placeholder: "bedrooms", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :square_ft, placeholder: "square_ft", class: "form control", required: true %>
+		</div>
+		<div>
+			<%= f.text_field :city, placeholder: "city", class: "form control", required: true %>
+		</div>
+		    <%= f.submit "Submit" %>
+	<% end %>
+</div>

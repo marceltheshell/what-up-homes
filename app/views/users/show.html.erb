@@ -1,0 +1,5 @@
+<div class="profile">
+	<h1>Welcome, <%= @user.email %>!</h1>
+	<%= button_to "Edit Your Profile", edit_user_path, :class => "button", method: :get %>
+	<%= button_to "Log Out", "/sign_out" %>
+</div>
