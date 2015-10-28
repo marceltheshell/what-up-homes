@@ -1,15 +1,60 @@
 <div class="container">
-	<h1>Current Listing</h1>
-
-	<h3><%= @listing.address %></h3>
-	<h3><%= @listing.date %></h3>
-	<h3><%= @listing.listing_id %></h3>
-	<h3><%= @listing.listing_title %></h3>
-	<h3><%= @listing.price %></h3>
-	<h3><%= @listing.bedrooms %></h3>
-	<h3><%= @listing.square_ft %></h3>
-	<h3><%= @listing.city %></h3>
-</div>
+	<div class="row">
+		<h2>Good on you! You just created a listing.</h2>
+		
+		<h3>Date: <%= @listing.date %></h3>
+		<h3>Address: <%= @listing.address %></h3>
+		<h3>Listing title: <%= @listing.listing_title %></h3>
+		<h3>Price: <%= @listing.price %></h3>
+		<h3>Bedrooms: <%= @listing.bedrooms %></h3>
+		<h3>Square Feet: <%= @listing.square_ft %></h3>
+		<h3>City: <%= @listing.city %></h3>
+	</div>
+	<div>
+		<div style="padding: 0; margin: 0; border: 0; outline: 0; width: 300px; border: 1px solid #999;"> 
+			<div style="border:0;outline:0;padding:0; margin: 11px 9px 0;">
+				<h2 style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 0; margin: 0; border: 0; outline: 0; text-decoration: none; vertical-align: baseline; font-style: normal; background: none; text-align: left; font:15px/19px 'Arial Black', Gadget, sans-serif; font-weight: normal; color: #222;"> 1517 12th Avenue </h2>
+				<h3 style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 0; margin: 0; border: 0; outline: 0; text-decoration: none; vertical-align: baseline; font-style: normal; background: none; text-align: left; font:12px/14px Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color: #666; margin: 2px 0 4px 0;">Walker&rsquo;s Paradise</h3> 
+				<div style="padding: 0; margin: 0; border: 0; outline: 0; position: relative; width: 100%; padding-bottom: 30%"> 
+					<div style="padding: 0; margin: 0; border: 0; outline: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0;"> 
+						<a href="https://www.walkscore.com/score/1517-12th-ave-seattle?utm_source=badge&utm_medium=responsive&utm_campaign=badge"><!--[if lte IE 8]><img src="//pp.walk.sc/badge/walk/1517-12th-ave-seattle.png" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Walk Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if gt IE 8]><img src="//pp.walk.sc/badge/walk/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Walk Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if !IE]> <!-- -->
+						<img src="//pp.walk.sc/badge/walk/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Walk Score of 1517 12th Avenue Seattle WA 98122"><!-- <![endif]--><!--[if lte IE 8]><img src="//pp.walk.sc/badge/transit/1517-12th-ave-seattle.png" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Transit Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if gt IE 8]><img src="//pp.walk.sc/badge/transit/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Transit Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if !IE]> <!-- -->
+						<img src="//pp.walk.sc/badge/transit/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Transit Score of 1517 12th Avenue Seattle WA 98122"><!-- <![endif]--><!--[if lte IE 8]><img src="//pp.walk.sc/badge/bike/1517-12th-ave-seattle.png" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Bike Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if gt IE 8]><img src="//pp.walk.sc/badge/bike/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Bike Score of 1517 12th Avenue Seattle WA 98122"><![endif]--> <!--[if !IE]> <!-- -->
+						<img src="//pp.walk.sc/badge/bike/1517-12th-ave-seattle.svg" style='border-radius: 0; box-shadow: none; outline: 0; color: transparent; margin: 0 0 0 2.000000%; float: left; padding: 0; width: 30.666667%; background: none; border: 0;' alt="Bike Score of 1517 12th Avenue Seattle WA 98122"><!-- <![endif]--></a>
+					</div> 
+				</div>
+				<p style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 0; margin: 0; border: 0; outline: 0; color: #999; font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif; line-height: 13px; clear:both; padding: 8px 0;">
+					<a style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 0; margin: 0; border: 0; outline: 0; text-decoration: none; vertical-align: baseline; font-style: normal; background: none; text-align: left; color: #999; font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif; line-height: 13px;" target="_blank" href="https://www.redfin.com/city/16163/WA/Seattle?src=walkscore_badge"> Learn more about Seattle </a>
+					<img style="visibility: hidden;" width=1 height=1 src="https://www.redfin.com/rift?ev=external_web&p=walkscore&s=score_badge&a=impression" /> 
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- <div>
+		<script type='text/javascript'>
+var ws_wsid = '06463db888a14324985018e423db8e17';
+var ws_address = '1060 Lombard Street, San Francisco, CA';
+var ws_width = '600';
+var ws_height = '444';
+var ws_layout = 'horizontal';
+var ws_commute = 'true';
+var ws_transit_score = 'true';
+var ws_map_modules = 'all';
+	</script>
+		<style type='text/css'>#ws-walkscore-tile{position:relative;text-align:left}#ws-walkscore-tile *{float:none;}#ws-foottext, #ws-footer a,#ws-footer a:link{font:11px/14px Verdana,Arial,Helvetica,sans-serif;margin-right:6px;white-space:nowrap;padding:0;color:#000;font-weight:bold;text-decoration:none}#ws-footer a:hover{color:#000;text-decoration:none}#ws-footer a:active{color:#b14900}
+		</style>
+		<div id='ws-walkscore-tile'>
+			<div id='ws-footer' style='position:absolute;top:426px;left:8px;width:588px'>
+				<form id='ws-form'>
+					<span id='ws-foottext' style='float: left;'>Score <a id='ws-a' href='https://www.redfin.com/how-walk-score-works' target='_blank'>Your Home</a>: </span>
+					<input type='text' id='ws-street' style='position:absolute;top:0px;left:170px;width:386px' />
+					<input type='image' id='ws-go' src='//cdn2.walk.sc/2/images/tile/go-btn.gif' height='15' width='26' border='0' alt='get my Walk Score' style='position:absolute;top:0px;right:0px' />
+				</form>
+			</div>
+		</div>
+	<script type='text/javascript' src='http://www.walkscore.com/tile/show-walkscore-tile.php'></script>
+	</div>
+</div> -->
 
 
 

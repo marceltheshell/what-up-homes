@@ -5,11 +5,25 @@
 	<meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mapbox -->
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- mapbox js -->
+	<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+	<!-- mapbox css -->
+	<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+	<!-- mapbox heat map -->
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-heat/v0.1.3/leaflet-heat.js'></script>
+	<!-- mapbox end-->
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
+  	
 </head>
 <body>
 	<%= yield %>
+
+	<script async 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW9xRi3Y7Hnymif3joCBuFQXyQ5offBaA&callback=initMap"></script>
+		
 </body>
 </html>

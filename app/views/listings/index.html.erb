@@ -1,8 +1,52 @@
-<div class="container">
-	<h1>listings</h1>  
-	<!-- how the hell do I get the date in the place above here? -->
-	<% @listings.each do |listing| %> 
-	<h4><strong><a href="#"><%= listing.listing_title %></a></strong></h4> 
-	<h4><font color='gray'><%= listing.address %></font></h4>
-	<% end %>
+
+<div class="container"> 
+    <div class="row">
+        <div class="sidebar col-md-4">
+        	<h1>listings</h1>  
+        	<% @listings.each do |listing| %> 
+        	<h4><strong><a href="#"><%= listing.listing_title %></a></strong></h4> 
+        	<h4><font color='gray'><%= listing.address %></font></h4>
+            <h4><font color='red'><%= listing.city %></font></h4>
+            <h4><font color='green'><%= listing.state %></font></h4>
+        	<h4 class="latitude"><font color='gray'><%= listing.latitude %></font></h4>
+        	<h4 class="longitude"><font color='gray'><%= listing.longitude %></font></h4>
+        	<% end %>
+        </div>
+
+        <div class="col-md-8">
+        <div id='map'></div>
+        </div>
+    </div>
 </div>
+
+<script>
+    var json = <%=raw @json %>
+    
+    var features = []
+    for (var i = 0; i < json.length; i++) {
+   
+        features.push({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [json[i].longitude, json[i].latitude]
+            }
+        });
+    };
+    
+    var map = L.mapbox.map('map', 'marceldegas.o0meeli2').setView([39.7, -121.879523], 8);
+    L.mapbox.featureLayer(features).addTo(map);
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+

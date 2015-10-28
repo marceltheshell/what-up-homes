@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   post '/sign_out', to: 'sessions#destroy'
 
+  get '/listings/heatmap', to: 'listings#heatmap', as: 'heatmap'
+
 end
 
 ###########################################################

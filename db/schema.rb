@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 20151023232629) do
     t.string   "bedrooms"
     t.string   "square_ft"
     t.string   "city"
+    t.string   "state"
+    t.string   "CL_region"
+    t.string   "zip_code"
+    t.text     "coordinates"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

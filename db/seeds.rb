@@ -1,3 +1,4 @@
+# f1 = "/Users/marceldegas/dev/what-up-homes/2_practice_craigslist_listings.csv"
 f1 = "/Users/marceldegas/dev/what-up-homes/craigslist_listings_wuh.csv"
 
 def inputListings(file)
@@ -16,6 +17,7 @@ def inputListings(file)
 		listing[:bedrooms] = temp[5]
 		listing[:square_ft] = temp[6]
 		listing[:city] = temp[7]
+		listing[:state] = temp[8]
 		res << listing 
 	end
 	Listing.create(res)
