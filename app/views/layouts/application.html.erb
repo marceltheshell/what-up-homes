@@ -20,6 +20,75 @@
   	
 </head>
 <body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <p class="navbar-brand logo">What Up Homes!</p>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <!-- <input type="text" class="form-control" placeholder="Search"> -->
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    Search by City
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">Bakersfield</a></li>
+					    <li><a href="#">Chico</a></li>
+					    <li><a href="#">Fresno</a></li>
+					    <li><a href="#">Gold Country</a></li>
+					    <li><a href="#">Hanford</a></li>
+					    <li><a href="#">Inland Empire</a></li>
+					    <li><a href="#">Las Vegas</a></li>
+					    <li><a href="#">Los Angeles</a></li>
+					    <li><a href="#">Mendocino</a></li>
+					    <li><a href="#">Merced</a></li>
+					    <li><a href="#">Mohave</a></li>
+					    <li><a href="#">Monterey</a></li>
+					    <li><a href="#">Orange County</a></li>
+					    <li><a href="#">Gold Country</a></li>
+					    <li><a href="#">Palm Springs</a></li>
+					    <li><a href="#">Redding</a></li>
+					    <li><a href="#">Reno</a></li>
+					    <li><a href="#">Sacramento</a></li>
+					    <li><a href="#">San Luis Obispo</a></li>
+					    <li><a href="#">Santa Barabara</a></li>
+					    <li><a href="#">Santa Maria</a></li>
+					    <li><a href="#">San Francisco Bay</a></li>
+					    <li><a href="#">Siskiyou</a></li>
+					    <li><a href="#">St. George</a></li>
+					    <li><a href="#">Stockton</a></li>
+					    <li><a href="#">Susanville</a></li>
+					    <li><a href="#">Ventura</a></li>
+					    <li><a href="#">Visalia</a></li>
+					    <li><a href="#">Yuba/Sutter</a></li>
+					  </ul>
+					</div>
+		        </div>
+		    </form>
+	      <ul class="nav navbar-nav navbar-right">
+		    <%= link_to "Login", login_path, {
+					class: "btn btn-lg"
+					} %>
+
+			<%= link_to "Sign Up", new_user_path, {
+					class: "btn btn-lg"
+					} %>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 	<%= yield %>
 
 	<script async 

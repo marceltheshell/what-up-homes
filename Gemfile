@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'font-awesome-sass'
 #some plugin for mapbox
 gem 'responders', '~> 2.0'
 #geocoder

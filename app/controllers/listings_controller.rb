@@ -1,5 +1,6 @@
 class ListingsController < ApplicationController
   def index
+    @listings_search = Listing.search(params[:search])
   	@listings = Listing.all
     @jsonListings = []
     @listings.each do |t|

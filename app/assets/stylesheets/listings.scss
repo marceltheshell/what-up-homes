@@ -1,6 +1,40 @@
+.sidebar {
+	height: 800px;
+	overflow: scroll;
+}
+
+.listings-header {
+	width: 100%;
+	height: 200px;
+}
+
+.listing-box { 
+	background: linear-gradient(135deg, #909090, #D8D8D8);
+	border: solid grey 1px;
+	margin: 2px;
+	overflow: hidden;
+	border-radius: 3%;
+	
+}
+
+.logo {
+	color: #FFFFFF;
+	font-family: impact;
+}
+
+.brand {
+	color: white;
+	font-family: palatino;
+}
+
+.navbar {
+	background-color: #686868;
+}
+
 body {
 	margin:0; 
 	padding:0; 
+	background-color: black;
 }
 #map { 
 	height: 800px;
@@ -10,7 +44,6 @@ body {
 	width:100%;
 }
 
-.sidebar {
-	height: 800px;
-	overflow: scroll;
-}
+
+
+
