@@ -9,12 +9,11 @@
 }
 
 .listing-box { 
-	background: linear-gradient(135deg, #909090, #D8D8D8);
+	background: linear-gradient(135deg, #505050, #D8D8D8);
 	border: solid grey 1px;
 	margin: 2px;
 	overflow: hidden;
 	border-radius: 3%;
-	
 }
 
 .logo {
@@ -24,7 +23,8 @@
 
 .brand {
 	color: white;
-	font-family: palatino;
+	font-family: optima;
+	text-transform: uppercase;
 }
 
 .navbar {

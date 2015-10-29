@@ -36,16 +36,19 @@
    
         features.push({
             type: 'Feature',
-                    properties: {
-                        title: "$" + json[i].price + "/month",
-                        'city': json[i].address
-                        // 'marker-color': '#f86767'
-                    },
-
-                geometry: {
-                    type: 'Point',
-                    coordinates: [json[i].longitude, json[i].latitude]
-                }
+            properties: {
+                title: "$" + json[i].price + "/month",
+                'city': json[i].address,
+                'marker-color': '0033FF',
+                'marker-symbol': 'circle'
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [
+                    json[i].longitude, 
+                    json[i].latitude
+                    ]
+            }
         });
     };
     
