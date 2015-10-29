@@ -6,6 +6,17 @@ require 'csv'
 region_name = ["bakersfield", "chico", "fresno", "goldcountry", "hanford", "inlandempire", "lasvegas", "losangeles", "mendocino", "merced", "modesto", "mohave", "monterey", "orangecounty", "palmsprings", "redding", "reno", "sacramento", "sandiego", "slo", "santabarbara", "santamaria", "sfbay", "siskiyou", "stgeorge", "stockton", "susanville", "ventura", "visalia", "yubasutter"
 ]
 
+# address_array = [] 
+# date_array = [] 
+# id_array = []
+# title_array = [] 
+# price_array = []
+# bedrooms_array = []  
+# sqft_array = []  
+# city_array = [] 
+# state_array = []
+# cl_region_array = []
+
 region_name.each do |region|
 	# write change name logic here
 
@@ -22,11 +33,11 @@ region_name.each do |region|
 		#puts res
 
 		if (/[0-9]/ =~ res[0]) != nil
+			#plug in addy into addy
 			address_array << res
 			# plug in the region name into the city
 			city_array << region
 		else
-			# put blank space into address
 			temp = res.split
 			city_array << temp[0] 
 			address_array << " "

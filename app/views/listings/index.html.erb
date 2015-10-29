@@ -2,6 +2,10 @@
 <div class="window row">
     <div class="row">
         <div class='col-md-3 sidebar'>
+                <!-- <div class="sidebar-header">
+                What Up Homes!
+                    <h3 class="logo"></h3>
+                </div> -->
                 <!-- listings loop  -->
                 <% @listings.each do |listing| %> 
                 <div class="container">
@@ -52,7 +56,7 @@
         });
     };
     
-    var map = L.mapbox.map('map', 'marceldegas.o0meeli2').setView([39.7, -121.879523], 8);
+    var map = L.mapbox.map('map', 'marceldegas.o0meeli2').setView([39.7, -121.879523], 10);
     L.mapbox.featureLayer(features).addTo(map);
 
 
