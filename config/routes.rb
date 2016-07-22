@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'listings/index'
-
-  get 'listings/edit'
-
-  get 'listings/new'
-
-  get 'listings/show'
 
   root 'welcome#index'
   

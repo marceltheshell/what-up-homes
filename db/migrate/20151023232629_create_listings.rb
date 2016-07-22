@@ -10,9 +10,8 @@ class CreateListings < ActiveRecord::Migration
       t.string :square_ft
       t.string :city
       t.string :state
-      t.string :CL_region
+      t.string :cl_region
       t.string :zip_code
-      t.text :coordinates
       t.float :latitude
       t.float :longitude
 

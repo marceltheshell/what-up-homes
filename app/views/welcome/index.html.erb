@@ -1,25 +1,35 @@
-<div class="background-image">
-	
-	<div class="middle">
-		<div id="bgndVideo" class="player" 
-	    	data-property="{videoURL:'http://youtu.be/uw08j-yOfcE',containment:'body',autoPlay:true, mute:true, startAt:5, opacity:1, addRaster:true, stopAt:75.5, showControls:false, stopMovieOnBlur:false}">
-	    </div>
+<div class="container">
+    <div class="filter">
+        <%= form_tag root_path, method: :get do %>
+            <%= label_tag :bedrooms %>
+            <%= text_field_tag :bedrooms, params["bedrooms"] %>
 
+            <%= label_tag :state %>
+            <%= text_field_tag :state, params["state"] %>
 
-	</div>
-	<h2>LOVE WHERE YOU LIVE</h2>
-		<h4>Discover everything about an address before renting or buying.</h4> 
-	<div>
-		<!-- search bar here. make the div sorta see-through to see the image in the back but still shaded -->
-	</div>
-</div>
-<div class="historical_data_container">
-	<div class="intro text-center">
-		<h2 class="row-space-1"><strong>Interested in a region?</strong></h2>
-		<p class="text-lead">Search our database for listings in a region</p>
-	</div>
-	<div class="discovery-tiles">
-		<div></div>
-		
-	</div>
+            <%= label_tag :price %>
+            <%= text_field_tag :price, params["price"] %>
+
+            <%= submit_tag "Search", name: nil %>
+        <% end %>
+
+    	<div class="row">
+    		<div class="listing-box col-md-4">
+    			<% @listings.each do |listing| %> 
+                    <table class="table table-hover table-condensed">
+                        <strong><%= number_to_currency(listing.price, precision: 0) %></strong> on 
+                        <strong><%= listing.date %></strong>
+                        <br>
+                        <%= listing.address %>
+                        <br>
+                        <%= listing.bedrooms %> bdrms | 
+                        <%= listing.square_ft %> sq_ft | 
+                        <%= listing.city %> |
+                        <%= listing.state %> 
+                    </table>   
+                <% end %>
+    		</div>
+    	</div>
+    </div>
+    <%= will_paginate @listings, renderer: BootstrapPagination::Rails %>
 </div>

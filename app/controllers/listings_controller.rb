@@ -9,8 +9,13 @@ class ListingsController < ApplicationController
       end
     end
     @json = @jsonListings.to_json
+
+    respond_to do |format|
+      format.html
+      format.csv {send_data @listings.to_csv}
+    end 
   end
-  
+    
   def new
   	@listing = Listing.new
   	render :new
@@ -25,8 +30,8 @@ class ListingsController < ApplicationController
   end
 
   def show
-  	@listing = Listing.find(params[:id])
-    render :show
+  	# @listing = Listing.find(params[:id])
+   #  render :show
   end
 
   def listing_params

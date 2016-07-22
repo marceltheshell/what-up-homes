@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* Description
+What-up-homes is basically a web-scraper turned web app.  The task of the scraper is to scrape the apartment listings from all 399 cities in which Craigslist has pages, geocode those addresses, then push that data into a Postgres database.  Some massaging of the data was necessary as some Craigslist apartment ads include the exact street address while others only include the general region which makes geocoding complicated.  
 
 * System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+Rails 
+Will-paginate
+Postgres
+Geocoder
 
 * Deployment instructions
+1. Git clone the repo.
+2. Make sure you have Postgres running in your local environment
+3. Bundle install
+4. Rails s will start the server
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

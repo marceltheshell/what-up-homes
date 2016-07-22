@@ -1,5 +1,4 @@
-# f1 = "/Users/marceldegas/dev/what-up-homes/2_practice_craigslist_listings.csv"
-f1 = "../../craigslist_listings_wuh.csv"
+f1 = "/Users/marceldegas/dev/what-up-homes/aaa_craigslist_listings_wuh.csv"
 
 def inputListings(file)
 	temp = nil
@@ -24,10 +23,14 @@ def inputListings(file)
 end
 
 # clears db
-Listing.destroy_all
+# Listing.destroy_all
 
 # refresh with new data
 inputListings(f1)
+
+
+	
+
 
 
 
